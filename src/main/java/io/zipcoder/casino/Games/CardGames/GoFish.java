@@ -23,7 +23,7 @@ public class GoFish extends CardGames implements GameInterface {
     public Scanner hold = new Scanner(System.in);
     private boolean gameOver;
     private boolean running;
-
+    Input input = new Input(System.in,System.out);
 
     public GoFish (GoFishPlayer player) {
         this.player = player;
@@ -131,7 +131,7 @@ public class GoFish extends CardGames implements GameInterface {
     public boolean coinToss() {
 
         int toss = (int) (Math.floor(Math.random()*2));
-        int choice = Input.getIntInput("\n\nChoose heads or tails:\n" +
+        int choice = input.getIntegerInput("\n\nChoose heads or tails:\n" +
                 "~~~~~~~~~~~~~~1: Heads\n2: Tails");
 
         if (choice - 1 == toss) {
