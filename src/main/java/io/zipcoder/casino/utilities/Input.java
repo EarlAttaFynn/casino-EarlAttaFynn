@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * You are advised against modifying this class.
  */
-public final class Input {
+public final class  Input {
     private final Scanner input;
     private final PrintStream output;
 

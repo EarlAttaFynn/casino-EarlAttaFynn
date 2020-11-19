@@ -75,7 +75,6 @@ public class Switchboard {
                     break;
                 case 3:
                     ChoHanPlayer choHanPlayer = new ChoHanPlayer(currentPlayer);
-                   // ChoHan choHan = new ChoHan(choHanPlayer);
                     break;
                 case 4:
                     CrapsPlayer crapsPlayer = new CrapsPlayer(currentPlayer);
