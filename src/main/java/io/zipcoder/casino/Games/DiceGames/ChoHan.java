@@ -26,12 +26,12 @@ public class ChoHan extends DiceGames {
     Scanner scanner = new Scanner(System.in);
 
    // @Override
-    public boolean playGame() {
+    public boolean playGame(){
         boolean quit = false;
         output.printToScreen("\nWelcome to Cho Han " + choHanPlayer.getName() + "!");
 
         while (gameRuns){
-            output.printToScreen("\nChoose between Cho and Han " + choHanPlayer.getName() + ".\n" +
+            output.printToScreen("\nChoose between Cho and Han.\n" +
                     "1 - Cho (Even number total wins)\n" +
                     "2 - Han (Odd number total wins)\n" +
                     "3 - Quit Game\n" +
@@ -42,11 +42,15 @@ public class ChoHan extends DiceGames {
 
                 if (gameInput == 1){
                     output.printToScreen("\nYou have chosen Cho (Evens)");
+                    rollDice();
                 } else if (gameInput == 2){
                     output.printToScreen("\nYou have chosen Han (Odds)");
+                    rollDice();
                 } else if (gameInput == 3){
                     quit = true;
                     return quit;
+                } else {
+                    output.printToScreen("\nIncorrect input. Please enter 1, 2, or 3");
                 }
 
 
@@ -54,9 +58,8 @@ public class ChoHan extends DiceGames {
                 scanner.next();
                 output.printToScreen("\n" + "Sorry! Please try again and choose a valid option.");
             }
-
+/*
             Integer currentRoll = dice.tossAndSum(2);
-
 
             if (currentRoll % 2 == 0 && gameInput == 1) {
                 output.printToScreen("\nCongrats you win!! You rolled " + currentRoll);
@@ -65,10 +68,33 @@ public class ChoHan extends DiceGames {
             } else {
                 output.printToScreen("\nSorry you lose! You rolled a " + currentRoll + " better luck next time");
             }
-
+*/
         }
         return quit;
 
+    }
+
+    public String rollDice() {
+        String message = " ";
+
+        Integer currentRoll = dice.tossAndSum(2);
+
+        int gameInput = input.getIntegerInput("Confirm your choice: ");
+        if (currentRoll % 2 == 0 && gameInput == 1) {
+            output.printToScreen("\nCongrats you win!! You rolled " + currentRoll);
+            message = "\nCongrats you win!! You rolled " + currentRoll;
+            return message;
+
+        } else if (currentRoll % 2 != 0 && gameInput == 2) {
+            output.printToScreen("\nCongrats you win!! You rolled " + currentRoll);
+            message = "\nCongrats you win!! You rolled " + currentRoll;
+            return message;
+        } else {
+            output.printToScreen("\nSorry you lose! You rolled a " + currentRoll + " better luck next time");
+            message = "\nSorry you lose! You rolled a " + currentRoll + " better luck next time";
+            return message;
+
+        }
     }
 
     }
