@@ -7,6 +7,7 @@ import io.zipcoder.casino.utilities.Output;
 import io.zipcoder.casino.utilities.Switchboard;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class Craps extends DiceGames implements GamblingGameInterface {
     private CrapsPlayer crapsPlayer;
     private Output output = new Output();
@@ -16,10 +17,12 @@ public class Craps extends DiceGames implements GamblingGameInterface {
     public Scanner hold = new Scanner(System.in);
     public Dice dice = new Dice(2);
     Input input = new Input(System.in, System.out);
+
     public void pause() {
         System.out.println("\nPlease press Enter to roll dice again...");
         hold.nextLine();
     }
+
     public Craps(CrapsPlayer crapsPlayer) {
         this.crapsPlayer = crapsPlayer;
     }
