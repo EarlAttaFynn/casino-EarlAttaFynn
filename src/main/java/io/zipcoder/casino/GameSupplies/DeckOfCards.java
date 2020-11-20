@@ -3,7 +3,7 @@ package io.zipcoder.casino.GameSupplies;
 import java.util.Collections;
 import java.util.Stack;
 
-public class DeckOfCards {
+public class DeckOfCards extends Stack<Card> {
 
     private Stack<Card> deckOfCards;
 
@@ -16,7 +16,7 @@ public class DeckOfCards {
         return deckOfCards;
     }
 
-    private Stack<Card> shuffleDeck() {
+    Stack<Card> shuffleDeck() {
         Collections.shuffle(deckOfCards);
         return deckOfCards;
     }
@@ -28,7 +28,7 @@ public class DeckOfCards {
     /**
      * This code block creates the deck of cards
      */
-    private void refreshDeck() {
+    void refreshDeck() {
         Stack<Card> newDeck = new Stack<Card>();
         for (Rank r : Rank.values()) {
             for (Suit s : Suit.values()) {

@@ -1,7 +1,8 @@
 package io.zipcoder.casino.utilities;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import io.zipcoder.casino.Games.CardGames.BlackJack;
-import io.zipcoder.casino.Games.CardGames.GoFish;
+//import io.zipcoder.casino.Games.CardGames.GoFish;
 import io.zipcoder.casino.Games.DiceGames.ChoHan;
 import io.zipcoder.casino.Games.DiceGames.Craps;
 import io.zipcoder.casino.Players.*;
@@ -66,8 +67,10 @@ public class Switchboard {
             switch (selection) {
                 case 1:
                     BlackJackPlayer blackJackPlayer = new BlackJackPlayer(currentPlayer);
-                    //BlackJack blackJack = new BlackJack(blackJackPlayer);
-                    //blackJack.playGame();
+                    BlackJack blackJack = new BlackJack(blackJackPlayer);
+                    while (!blackJack.playGame()){
+                        blackJack.playGame();
+                    }
                     break;
                 case 2:
                     GoFishPlayer goFishPlayer = new GoFishPlayer(currentPlayer);
@@ -82,7 +85,10 @@ public class Switchboard {
                     break;
                 case 4:
                     CrapsPlayer crapsPlayer = new CrapsPlayer(currentPlayer);
-                   // Craps craps = new Craps(crapsPlayer);
+                    Craps craps = new Craps(crapsPlayer);
+                    while (!craps.playGame()){
+                        craps.playGame();
+                    }
                     break;
                 case 5:
                     exit = true;

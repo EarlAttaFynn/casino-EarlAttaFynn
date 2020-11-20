@@ -10,6 +10,8 @@ public class Card {
         this.value = value;
     }
 
+    public Card() {}
+
     public Suit getSuit() {
         return this.suit;
     }
@@ -31,6 +33,6 @@ public class Card {
      */
     @Override
     public String toString() {
-        return String.format("%s of %s", this.value, this.suit);
+        return String.format(" %s of %s ", this.value, this.suit);
     }
 }

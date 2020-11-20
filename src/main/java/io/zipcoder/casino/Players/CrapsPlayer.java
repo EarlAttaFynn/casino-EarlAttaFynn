@@ -1,6 +1,8 @@
 package io.zipcoder.casino.Players;
 
-public class CrapsPlayer implements GamblingPlayerInterface{
+public class CrapsPlayer implements GamblingPlayerInterface
+ {
+
     private String name;
     private Player player;
     private double wallet;
@@ -12,12 +14,13 @@ public class CrapsPlayer implements GamblingPlayerInterface{
     }
 
     public double getWallet() {
-        return 0;
+        return this.wallet;
     }
 
     public void setWallet(double amount) {
         this.wallet = amount;
         player.setWallet(amount);
+
     }
 
     public double placeBet() {

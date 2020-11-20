@@ -6,23 +6,21 @@ import io.zipcoder.casino.Games.GameInterface;
 
 import java.util.ArrayList;
 
-public class CardGames implements GameInterface {
-    /**
-     * every card game has a deck of cards
-     * every hard game has a player hand and a house hand
-     */
+public class CardGames extends Card implements GameInterface {
+
     private DeckOfCards deck;
-//    private ArrayList<Card> houseHand;
+//    private ArrayList<Card> dealerHand;
 //    private ArrayList<Card> playerHand;
 
     public CardGames() {
+        super();
         deck = new DeckOfCards();
-//        houseHand = new ArrayList<Card>();
+//        dealerHand = new ArrayList<Card>();
 //        playerHand = new ArrayList<Card>();
     }
 
-    public void playGame() {
-
+    public boolean playGame() {
+        return true;
     }
 
     public boolean endGame() {
@@ -32,17 +30,22 @@ public class CardGames implements GameInterface {
     // assume that this is a single player game, so we don't need to rotate through several players
 //    public void dealHand(int howManyCards) {
 //        for (int i = 0; i < howManyCards; i++) {
-//            houseHand.add(deck.dealCard());
 //            playerHand.add(deck.dealCard());
+//            dealerHand.add(deck.dealCard());
+//
 //        }
 //    }
+
+    public DeckOfCards getDeck() {
+         return this.deck;
+    }
 
 //    public ArrayList<Card> getPlayerHand() {
 //        return playerHand;
 //    }
-
-//    public ArrayList<Card> getHouseHand() {
-//        return houseHand;
+//
+//    public ArrayList<Card> getDealerHand() {
+//        return dealerHand;
 //    }
 
 

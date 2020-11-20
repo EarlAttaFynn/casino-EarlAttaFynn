@@ -4,7 +4,7 @@ public enum Rank {
 
 // Go Fish and Blackjack don't use the joker cards
 // created this ranking because ACE can have a value of 1 or 11 and JACK, QUEEN, and KING have the value of 10 also in GoFish you ask for "ace", "seven", etc
-        ACE(1, 11, "ace"),
+        ACE(1, 1, "ace"),
         TWO(2, 2, "two"),
         THREE(3, 3, "three"),
         FOUR(4, 4, "four"),
@@ -14,9 +14,9 @@ public enum Rank {
         EIGHT(8, 8, "eight"),
         NINE(9, 9, "nine"),
         TEN(10, 10, "ten"),
-        JACK(11, 10, "jack"),
-        QUEEN(12, 10, "queen"),
-        KING(13, 10, "king");
+        JACK(11, 10, "Jack"),
+        QUEEN(12, 10, "Queen"),
+        KING(13, 10, "King");
 
         private int primaryValue;
         private int secondaryValue;
