@@ -69,9 +69,10 @@ public class GoFish extends CardGames implements GameInterface {
 
         Output.printToScreen(
                 "\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "~~~~~~~~~~~~~~~~~~~~~~~~~~~Welcome to the Go Fish Table~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Ya Simple Bitch!!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        "~~~~~~~~~~~~~~~~~~~~~~~~~~~Welcome to the Go Fish Table~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
+                        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Ya Simple Bitch!!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
+                        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
         Output.printToScreen("\n" +
                 "************************************MENU********************************************\n\n" +
                 "1: Play Go Fish!\n2: Back to Games Menu");
@@ -92,7 +93,9 @@ public class GoFish extends CardGames implements GameInterface {
                     coinToss();
                     break;
                 case 2:
-                    return quit = true;
+
+                    quit = true;
+                    return quit;
 
             }
         }
@@ -166,6 +169,7 @@ public class GoFish extends CardGames implements GameInterface {
 
             System.out.printf("You politely ask: Do you have any %ss\n", askingCard.getValue().getThirdValue());
             System.out.println(fishing(askingCard, playerTurn));
+
 
             if(checkBooks(playerHand)) {
                 System.out.println("Nice you formed a book!\n");
