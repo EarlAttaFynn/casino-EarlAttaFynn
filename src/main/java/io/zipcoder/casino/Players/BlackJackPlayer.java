@@ -3,7 +3,7 @@ package io.zipcoder.casino.Players;
 import io.zipcoder.casino.GameSupplies.Card;
 
 import java.util.ArrayList;
-
+/*
 public class BlackJackPlayer implements GamblingPlayerInterface{
     private String name;
     private Player player;
@@ -32,4 +32,4 @@ public class BlackJackPlayer implements GamblingPlayerInterface{
     public String getName() {
         return this.name;
     }
-}
+} */
