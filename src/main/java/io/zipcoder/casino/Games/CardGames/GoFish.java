@@ -183,7 +183,7 @@ public class GoFish extends CardGames implements GameInterface {
     }
 
     public boolean coinToss() {
-
+        Input input = new Input(System.in, System.out);
         int toss = (int) (Math.floor(Math.random()*2));
         int choice = input.getIntegerInput("\n\nChoose heads or tails:\n" +
                 "~~~~~~~~~~~~~~1: Heads\n2: Tails");
