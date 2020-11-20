@@ -76,24 +76,24 @@ public class GoFish extends CardGames implements GameInterface {
         }
     }
 
-    public void playGame () {
-        //Deal starting hands, 7 cards each.
-        for (int i = 0; i < 7; i++) {
-            draw(playerHand);
-            draw(dealerHand);
-        }
-
-        while (running) {
-
-            //Check coinToss boolean, if true playerTurn first.
-            if (coinToss()) {
-                playerTurn();
-            } else dealerTurn();
-
-
-        }
-
-    }
+//    public void playGame () {
+//        //Deal starting hands, 7 cards each.
+//        for (int i = 0; i < 7; i++) {
+//            draw(playerHand);
+//            draw(dealerHand);
+//        }
+//
+//        while (running) {
+//
+//            //Check coinToss boolean, if true playerTurn first.
+//            if (coinToss()) {
+//                playerTurn();
+//            } else dealerTurn();
+//
+//
+//        }
+//
+//    }
 
 
     public void playerTurn() {
@@ -183,7 +183,7 @@ public class GoFish extends CardGames implements GameInterface {
     }
 
     public boolean coinToss() {
-
+        Input input = new Input(System.in, System.out);
         int toss = (int) (Math.floor(Math.random()*2));
         int choice = input.getIntegerInput("\n\nChoose heads or tails:\n" +
                 "~~~~~~~~~~~~~~1: Heads\n2: Tails");
